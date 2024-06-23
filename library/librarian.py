@@ -1,9 +1,6 @@
 def add_book(library:dict, title:str, author:str, isbn:str, available = True):
     if isbn not in library:
-        library[isbn]={}
-        library[isbn]["title"] = title
-        library[isbn]["author"] = author
-        library[isbn]["available"] = available
+        library[isbn] = {"title": title, "author": author, "available": available}
         print(f"{library[isbn]["title"]} by {library[isbn]["author"]} (ISBN: {isbn}) has been added to the library")
     else:
         print(f"You have already added the book: {library[isbn]["title"]}, ISBN: {isbn} to the library.")
